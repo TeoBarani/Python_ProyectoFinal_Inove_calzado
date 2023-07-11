@@ -3,6 +3,7 @@ from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 import numpy as np
+import graficar 
 
 engine = sqlalchemy.create_engine("sqlite:///ventas_calzados.db")
 base = declarative_base()
@@ -84,8 +85,6 @@ def obtener_ventas_por_genero_pais(paises_objetivo, genero_objetivo, paises, gen
     
     return dic_paises_genero
 
-        
-
 
 if __name__ == "__main__":
     crear_tabla()
@@ -93,6 +92,8 @@ if __name__ == "__main__":
     obtener_paises_unicos(db[0])
     paises_objetivo = ['United States', 'United Kingdom', 'Canada']
     genero_objetivo = 'Male'
-    obtener_ventas_por_pais(paises_objetivo, db[0], db[3])
+    ventas_por_pais = obtener_ventas_por_pais(paises_objetivo, db[0], db[3])
     obtener_calzado_mas_vendido_por_pais(paises_objetivo, db[0], db[2])
-    obtener_ventas_por_genero_pais(paises_objetivo, genero_objetivo, db[0], db[1])
+    ventas_por_genero = obtener_ventas_por_genero_pais(paises_objetivo, genero_objetivo, db[0], db[1])
+    graficar.graficar_ventas_totales(ventas_por_pais)
+    graficar.graficar_ventas_genero(ventas_por_genero, genero_objetivo)
