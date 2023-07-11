@@ -5,7 +5,7 @@ def graficar_ventas_totales(dic):
     x = list(dic.keys())
     y = list(dic.values())
     
-    fuente_titulo = {'family': 'helvetica',
+    fuente_titulo = {'family': 'sans',
         'color':  'black',
         'weight': 'normal',
         'size': 16,
@@ -23,11 +23,10 @@ def graficar_ventas_genero(dic, genero):
     x = list(dic.keys())
     y = list(dic.values())
     
-    fuente_titulo = {'family': 'helvetica',
+    fuente_titulo = {'family': 'sans',
         'color':  'white',
         'weight': 'normal',
         'size': 16,
-        'backgroundcolor': 'black'
         }
 
     fig, ax = plt.subplots()
