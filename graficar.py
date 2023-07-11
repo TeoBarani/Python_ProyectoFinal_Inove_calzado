@@ -24,7 +24,7 @@ def graficar_ventas_genero(dic, genero):
     y = list(dic.values())
     
     fuente_titulo = {'family': 'sans',
-        'color':  'white',
+        'color':  'black',
         'weight': 'normal',
         'size': 16,
         }
