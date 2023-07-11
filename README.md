@@ -6,6 +6,7 @@ El objetivo del proyecto es el análisis de la base de datos "ventas_calzados.db
 - Un diccionario con las ventas totales de cada país requerido;
 - Un diccionario con el talle más vendido en cada país requerido;
 - Un diccionario con el total de ventas, de un género especificado. Ejecutado en cada país solicitado;
+- Dos gráficos, uno que muestra el total de ventas de cada país especificado, y otro con las ventas de un género específico en cada país.
 
 ### English:
 
@@ -15,3 +16,4 @@ The project´s objective is the analysis of the database "ventas_calzados.db", w
 - A dictionary that contains the total sales of every country required;
 - A dictionary that contains the most selled shoe size of each country required;
 - A dictionary that contains the shoe total sales of the gender requested. Action done for every country required; 
+- Two graphs, one which shows the total sales of each country requested, and the other one shows the sales of an specif gender per country.
